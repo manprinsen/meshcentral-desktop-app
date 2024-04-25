@@ -66,7 +66,7 @@ This command will package the app into a distributable format.
 
 ## Tests 🧪
 
-I have successfully been running, building and installing the app on Windows 11 (23H2) and MacOS 11.7.10.
+I have successfully been running, building and installing the app on Windows 11 (23H2), MacOS 11.7.10 and MacOS 14.3.1.
 
 Worth mentioning is that i have had serveral windows/sessions with Web-VNC and Web-RDP without any problems (so far) 🙌. 
 
