@@ -48,7 +48,7 @@ const URL = "https://meshcentral.mydomain.com";
 
 ### Running the App ▶️
 
-Once you've installed the dependencies, you can start the app using:
+Once you've installed the dependencies and have set your server url, you can start the app using:
 ``` bash
 npm start
 ```
