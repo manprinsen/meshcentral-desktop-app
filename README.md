@@ -37,6 +37,15 @@ To get the app running locally, follow these steps:
 npm install
 ```
 
+### Edit main.js ❗
+
+Before running the app it's important that you edit the line `const URL = "ENTER_YOUR_MESHCENTRAL_SERVER_URL_HERE";` at the very beginning of `main.js`.
+
+For example: 
+```bash
+const URL = "https://meshcentral.mydomain.com";
+```
+
 ### Running the App ▶️
 
 Once you've installed the dependencies, you can start the app using:
@@ -54,6 +63,12 @@ npm run dist
 ```
 
 This command will package the app into a distributable format.
+
+## Tests 🧪
+
+I have successfully been running, building and installing the app on Windows 11 (23H2) and MacOS 11.7.10.
+
+Worth mentioning is that i have had serveral windows/sessions with Web-VNC and Web-RDP without any problems (so far) 🙌. 
 
 ## Contribution 👥
 
