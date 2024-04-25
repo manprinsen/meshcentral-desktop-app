@@ -1,0 +1,37 @@
+{
+  "name": "meshcentral-desktop-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": ["meshcentral", "desktop", "app"],
+  "author": "Carlboms Data",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "se.carlbomsdata.meshcentral",
+    "productName": "Meshcentral Desktop App",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icons/win/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icons/mac/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "/icons/png/128x128.png"
+    }
+  }
+}
