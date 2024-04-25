@@ -2,7 +2,7 @@ const { app, BrowserWindow, nativeImage } = require('electron');
 const fs = require("fs");
 const path = require("path");
 
-const URL = "https://meshcentral.carlbomsdata.se";
+const URL = "ENTER_YOUR_MESHCENTRAL_SERVER_URL_HERE";
 const windowStatePath = path.join(app.getPath("userData"), "window-state.json");
 
 let mainWindowState;
@@ -76,7 +76,6 @@ function createWindow() {
                 nodeIntegration: true,
                 contextIsolation: false
             },
-            //title: "noVNC: "+win.getTitle(),
             icon: nativeImage.createFromPath(path.join(__dirname, '/icons/png/128x128.png')) // Set the window icon here
         });
 
