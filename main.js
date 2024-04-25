@@ -2,8 +2,11 @@ const { app, BrowserWindow, nativeImage } = require('electron');
 const fs = require("fs");
 const path = require("path");
 
+// now works with meshcentral and anvil.works
 const URL = "ENTER_YOUR_MESHCENTRAL_SERVER_URL_HERE";
+const WINDOW_TITLE = "Meshcentral Desktop App"
 const windowStatePath = path.join(app.getPath("userData"), "window-state.json");
+const DEBUG = false;
 
 let mainWindowState;
 
@@ -25,14 +28,17 @@ function createWindow() {
         width: mainWindowState.width,
         height: mainWindowState.height,
         webPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false, // Consider enabling this and using preload scripts for security.
+            nodeIntegration: false,
+            contextIsolation: true, // Consider enabling this and using preload scripts for security.
+            enableRemoteModule: false,
         },
-        title: "Meshcentral Desktop App",
+        title: WINDOW_TITLE,
         icon: nativeImage.createFromPath(path.join(__dirname, '/icons/png/128x128.png')) // Set the window icon here
     });
 
-    win.setMenu(null);
+    if (DEBUG == false) {
+        win.setMenu(null);
+    }
 
     win.loadURL(URL);
 
@@ -76,6 +82,7 @@ function createWindow() {
                 nodeIntegration: true,
                 contextIsolation: false
             },
+            //title: "noVNC: "+win.getTitle(),
             icon: nativeImage.createFromPath(path.join(__dirname, '/icons/png/128x128.png')) // Set the window icon here
         });
 
