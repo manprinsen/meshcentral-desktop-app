@@ -74,10 +74,6 @@ Worth mentioning is that i have had serveral windows/sessions with Web-VNC and W
 
 Feel free to fork the project and submit pull requests.
 
-## License 📄
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.
-
 ## Acknowledgments 💖
 
 - The Meshcentral team for providing the open-source management web portal.
